@@ -48,11 +48,11 @@ public struct ChangeLightDarkModeView: View {
 						changeUseSystemToggle()
 					}, label: {
 						VStack(alignment: .center) {
-							Image(LAC.device.isPhone || LAC.device.isPod ? "Phone Light" : "Pad Light", bundle: .module)
+							Image(LAC.device.userInterfaceIdiom == .phone ? "Phone Light" : "Pad Light", bundle: .module)
 								.resizable()
 								.frame(
-									width: LAC.device.isPad ? 150 : 55,
-									height: LAC.device.isPad ? 200 : 110
+									width: LAC.device.userInterfaceIdiom == .pad ? 150 : 55,
+									height: LAC.device.userInterfaceIdiom == .pad ? 200 : 110
 								)
 								.cornerRadius(6)
 								.overlay(
@@ -61,7 +61,7 @@ public struct ChangeLightDarkModeView: View {
 								)
 							
 							Text("Light")
-								.font(LAC.device.isPad ? .body : .caption)
+								.font(LAC.device.userInterfaceIdiom == .pad ? .body : .caption)
 								.fontWeight(.semibold)
 								.foregroundStyle(lightDarkManager.colorScheme == .light ? Color.accentColor : .gray)
 								.padding(5)
@@ -93,11 +93,11 @@ public struct ChangeLightDarkModeView: View {
 						changeUseSystemToggle()
 					}, label: {
 						VStack(alignment: .center) {
-							Image(LAC.device.isPhone || LAC.device.isPod ? "Phone Dark" : "Pad Dark", bundle: .module)
+							Image(LAC.device.userInterfaceIdiom == .phone ? "Phone Dark" : "Pad Dark", bundle: .module)
 								.resizable()
 								.frame(
-									width: LAC.device.isPad ? 150 : 55,
-									height: LAC.device.isPad ? 200 : 110
+									width: LAC.device.userInterfaceIdiom == .pad ? 150 : 55,
+									height: LAC.device.userInterfaceIdiom == .pad ? 200 : 110
 								)
 								.cornerRadius(6)
 								.overlay(
@@ -106,7 +106,7 @@ public struct ChangeLightDarkModeView: View {
 								)
 							
 							Text("Dark")
-								.font(LAC.device.isPad ? .body : .caption)
+								.font(LAC.device.userInterfaceIdiom == .pad ? .body : .caption)
 								.fontWeight(.semibold)
 								.foregroundStyle(lightDarkManager.colorScheme == .light ? Color.accentColor : .gray)
 								.padding(5)
@@ -135,7 +135,7 @@ public struct ChangeLightDarkModeView: View {
 				
 				Toggle(isOn: $useSystemAppearance, label: {
 					Text("Use System Appearance")
-						.font(LAC.device.isPad ? .body : .callout)
+						.font(LAC.device.userInterfaceIdiom == .pad ? .body : .callout)
 						.fontWeight(.regular)
 						.foregroundStyle(.primary)
 				})

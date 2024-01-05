@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import DeviceKit
 
 /// A set of keys that are used with AppStorage. These can only be used in
 /// iOS 16 and above
@@ -20,9 +19,8 @@ public enum LightAndDarkScheme: Int {
 }
 
 public enum LAC {
-	static let device = Device.current
+	static let device = UIDevice.current
 }
-
 
 public enum SFImage: String {
 	case checkmarkCircleFill = "checkmark.circle.fill"
@@ -40,6 +38,6 @@ public enum LocalizedText {
 }
 
 public enum AppFonts {
-	static let headerTitle: Font = LAC.device.isPad ? .subheadline : .footnote
-	static let footerInfo: Font = LAC.device.isPad ? .caption : .caption2
+	static let headerTitle: Font = LAC.device.userInterfaceIdiom == .pad ? .subheadline : .footnote
+	static let footerInfo: Font = LAC.device.userInterfaceIdiom == .pad ? .caption : .caption2
 }
