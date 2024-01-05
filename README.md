@@ -48,7 +48,7 @@ The code is packaged as a framework. You can install manually (by copying the fi
 
 ### Dependency For Another Swift Package
 To install using Swift Package Manager, add this to the `dependencies` section of your `Package.swift` file:
-`.package(url: "https://github.com/tazmancoder/ViewModifierKit.git", .upToNextMinor(from: "1.0.0"))`
+`.package(url: "https://github.com/tazmancoder/ChangeLightDarkModeKit.git", .upToNextMinor(from: "1.0.2"))`
 
 ### Xcode project
 To install this into your Xcode project, follow the instructions below:
