@@ -54,7 +54,7 @@ To install using Swift Package Manager, add this to the `dependencies` section o
 To install this into your Xcode project, follow the instructions below:
 
 1. Goto your project folder, tap Package Dependencies, under Packages click the plus button
-2. Enter this in searchbar - `https://github.com/tazmancoder/ViewModifierKit.git`. 
+2. Enter this in searchbar - `https://github.com/tazmancoder/ChangeLightDarkModeKit.git`. 
 3. Set `Dependency Rule` to `Up to Next Major Version`
 4. Tap `Add Package` button.
 
